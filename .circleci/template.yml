@@ -102,7 +102,7 @@ commands:
 jobs:
   cke5_manual:
     docker:
-      - image: cimg/node:22.12.0-browsers
+      - image: cimg/node:22.23.4-browsers
     resource_class: large
     steps:
       - checkout_command
@@ -119,7 +119,7 @@ jobs:
 
   cke5_validators:
     docker:
-      - image: cimg/node:22.12.0
+      - image: cimg/node:22.23.4
     resource_class: medium
     steps:
       - checkout_command
@@ -163,7 +163,7 @@ jobs:
 
   cke5_coverage:
     docker:
-      - image: cimg/node:22.12.0
+      - image: cimg/node:22.23.4
     resource_class: medium
     steps:
       - community_verification_command
@@ -187,7 +187,7 @@ jobs:
 
   cke5_trigger_release_process:
     docker:
-      - image: cimg/node:22.12.0
+      - image: cimg/node:22.23.4
     resource_class: medium
     steps:
       - community_verification_command
@@ -216,7 +216,7 @@ jobs:
 
   cke5_trigger_uber_ci:
     docker:
-      - image: cimg/node:22.12.0
+      - image: cimg/node:22.23.4
     resource_class: medium
     steps:
       - community_verification_command
@@ -228,7 +228,7 @@ jobs:
 
   release_prepare:
     docker:
-      - image: cimg/node:22.12.0
+      - image: cimg/node:22.23.4
     resource_class: large
     steps:
       - checkout_command
@@ -246,7 +246,7 @@ jobs:
 
   notify_ci_failure:
     docker:
-      - image: cimg/node:22.12.0
+      - image: cimg/node:22.23.4
     resource_class: medium
     parameters:
       hideAuthor:
@@ -266,7 +266,7 @@ jobs:
 
   stale_bot:
     docker:
-      - image: cimg/node:22.12.0
+      - image: cimg/node:22.23.4
     resource_class: medium
     steps:
       - checkout_command
